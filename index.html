@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVault | IT Resource Gallery</title>
+    <!-- Import Professional IT Fonts (Inter for body, Fira Code for system/tech accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Tech<span>Vault</span></a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- Controls: Theme Toggle & Mobile Menu -->
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <!-- Moon SVG (Shows in Light Mode) -->
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- Sun SVG (Shows in Dark Mode, hidden by default) -->
+                    <svg id="sun-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button id="hamburger" class="hamburger" aria-label="Open Mobile Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore the Future of Technology</h1>
+            <p>Discover in-depth resources, projects, and insights across modern web development, cybersecurity, cloud computing, and beyond.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Filtering System -->
+        <section class="filter-section">
+            <div id="filter-container" class="chip-container">
+                <!-- Filter chips will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Card Grid -->
+        <section class="gallery-section">
+            <div id="card-grid" class="grid-container">
+                <!-- Cards will be dynamically generated here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TechVault IT Resources. All rights reserved.</p>
+    </footer>
+
+    <!-- Dynamic Modal -->
+    <div id="item-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <!-- Perfectly centered SVG close icon -->
+            <button id="close-modal" class="close-btn" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- Modal Media Containers (Toggled by JS) -->
+            <img id="modal-image" src="" alt="Thumbnail preview">
+            <video id="modal-video" src="" controls playsinline></video>
+
+            <div class="modal-body">
+                <span id="modal-category" class="category-tag">Category</span>
+                <h2 id="modal-title">Modal Title</h2>
+                <p id="modal-meta" class="meta-info">Date &bull; Author</p>
+                <p id="modal-desc" class="full-desc">Full description goes here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
